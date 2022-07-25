@@ -4,6 +4,8 @@ import org.mockito.Mockito;
 
 import java.security.Provider;
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -88,4 +90,24 @@ class RestaurantServiceTest {
         assertEquals(initialNumberOfRestaurants + 1,service.getRestaurants().size());
     }
     //<<<<<<<<<<<<<<<<<<<<ADMIN: ADDING & REMOVING RESTAURANTS>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    //<<<<<<<<<<<<<<<<<<<<<Getting Cost of Items>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    @Test
+    public void get_total_cost_of_items_select_by_user()
+    {
+
+        List<Item> list = new ArrayList<>();
+        service.getTotalCostOfItems(list);
+        
+
+    }
+
+
+    //<<<<<<<<<<<<<<<<<<<<<Getting Cost of Items>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
+
 }
