@@ -98,8 +98,11 @@ class RestaurantServiceTest {
     {
 
         List<Item> list = new ArrayList<>();
-        service.getTotalCostOfItems(list);
+        list.add(new Item("Black Cofee", 50));
+        list.add(new Item("Garlic Sandwitch", 200));
+        int total_cost = service.getTotalCostOfItems(list);
         
+        Assertions.assertEquals(250, total_cost);
 
     }
 

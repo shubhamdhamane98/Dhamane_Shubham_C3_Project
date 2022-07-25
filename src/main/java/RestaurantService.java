@@ -28,6 +28,16 @@ public class RestaurantService {
         return restaurantToBeRemoved;
     }
 
+    public int getTotalCostOfItems(List<Item> items)
+    {
+        int total_cost = 0;
+        for (Item singleItem: items) {
+            total_cost += singleItem.getPrice();
+        }
+
+        return total_cost;
+    }
+
     public List<Restaurant> getRestaurants() {
         return restaurants;
     }
